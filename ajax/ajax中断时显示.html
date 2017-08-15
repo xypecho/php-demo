@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+	<input type="text" name="" id="namevalue">
+	<button id="btn">send</button>
+	输出：<span id="result"></span>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				$("#result").text("网速不好，等等");            //这个是为网速不好的时候准备的
+				$.post("test.php",{name:$("#namevalue").val()},function(data){
+					alert(1);          //弹窗打断post为了看网速不好的效果
+					$("#result").html(data);
+				}).error(function(){               //error方法为出错时执行的方法
+					alert("erroe")
+				})
+			})
+		})
+	</script>
+</html>

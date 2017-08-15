@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+	<input type="text" name="" id="namevalue">
+	<button id="btn">send</button>
+	输出：<span id="result"></span>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				$.post("test.php",{name:$("#namevalue").val()},function(data){
+					$("#result").html(data);
+				})
+			})
+		})
+	</script>
+</html>
