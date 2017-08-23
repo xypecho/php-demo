@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="test.php" method="post">
+		<p>用户名</p>
+		<input type="text" name="username">
+		<p>密码</p>
+		<input type="password" name="password">
+		<p>
+			<textarea name="message"></textarea>
+		</p>
+			
+			
+		<label>
+			<input type="radio" name="hobbies" value="windows">windows
+		</label>
+		<label>
+			<input type="radio" name="hobbies" value="linux">linux
+		</label>
+		<label>
+			<input type="radio" name="hobbies" value="microsoft">microsoft
+		</label>
+		<p>选择语言：</p>
+		<label>
+			<input type="checkbox" name="languages[]" value="java">java            <!--languages[]为多选框带值的方法-->
+		</label>
+		<label>
+			<input type="checkbox" name="languages[]" value="c#">C#
+		</label>
+		<label>
+			<input type="checkbox" name="languages[]" value="php">php
+		</label>
+
+
+		<p>选择城市：</p>
+		<select  name="city">
+			<option value="shanghai">shanghai</option>
+			<option value="beijing">beijing</option>
+			<option value="guangzhou">guangzhou</option>
+		</select>
+
+		<p>选择爱好：</p>
+		<select  name="interesting[]" multiple="" size="5">         <!--多个选项时传参实例-->
+			<option value="cpu">cpu</option>
+			<option value="ppp">ppp</option>
+			<option value="ddd">ddd</option>
+		</select>
+		<button type="submit">ok</button>
+		<button type="reset">cancel</button>
+	</form>
+</body>
+</html>
